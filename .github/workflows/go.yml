@@ -25,12 +25,20 @@ jobs:
       run: go mod tidy
 
     - name: Build
-      run: go build -v ./...
+      run: go build --buildmode=c-shared -o out/libmiyuu_ssh_core.so main.go
 
   #    run: go build -v ./...
 
     - name: Test
       run: go test -v ./...
+
+    - name: upload lib
+      uses: actions/upload-artifact@v3
+      with:
+        name: upload
+        path: |
+          out/libmiyuu_ssh_core.h
+          out/libmiyuu_ssh_core.so
 
   build_macos:
     runs-on: macos-latest
@@ -45,8 +53,10 @@ jobs:
     - name: dependency
       run: go mod tidy
 
+    # - name: Build
+    #   run: go build -v ./...
     - name: Build
-      run: go build -v ./...
+      run: go build --buildmode=c-shared -o out/libmiyuu_ssh_core.dylib main.go
 
   #    run: go build -v ./...
 
