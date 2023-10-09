@@ -32,10 +32,10 @@ jobs:
     - name: Test
       run: go test -v ./...
 
-    - name: upload lib
+    - name: upload artifact
       uses: actions/upload-artifact@v3
       with:
-        name: upload
+        name: linux
         path: |
           out/libmiyuu_ssh_core.h
           out/libmiyuu_ssh_core.so
@@ -62,3 +62,11 @@ jobs:
 
     - name: Test
       run: go test -v ./...
+
+    - name: upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: macos
+        path: |
+          out/libmiyuu_ssh_core.h
+          out/libmiyuu_ssh_core.dylib
