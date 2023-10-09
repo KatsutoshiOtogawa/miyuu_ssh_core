@@ -1,2 +1,3 @@
 # miyuu_ssh_core
-miyuu_ssh core library 
+
+miyuu_ssh core library

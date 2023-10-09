@@ -19,3 +19,23 @@
 
 # Go workspace file
 go.work
+
+# MacOS generated files
+.DS_Store
+.DS_Store?
+
+.idea
+.vscode/settings.json
+.vim
+
+go.sum
+
+*.orig
+*.pyc
+*.swp
+.env
+
+/.cargo_home/
+/.idea/
+/.vs/
+/.vscode/
