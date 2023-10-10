@@ -11,15 +11,15 @@ on:
 
   pull_request:
     branches: [ "main" ]
-
+permissions:
+  contents: read
 # buildするosのバージョンが新しすぎると実行環境で依存しているlibcが古くなり、実行できなくなる。
 # なので最新のものを使うわ無い。
 jobs:
 
   build_ubuntu:
     runs-on: ubuntu-20.04
-    permissions:
-      actions: read
+
     steps:
     - uses: actions/checkout@v3
 
@@ -56,8 +56,6 @@ jobs:
 
   build_macos:
     runs-on: macos-11
-    permissions:
-      actions: read
     steps:
     - uses: actions/checkout@v3
 
