@@ -62,12 +62,8 @@ jobs:
     - name: dependency
       run: go mod tidy
 
-    # - name: Build
-    #   run: go build -v ./...
     - name: Build
       run: go build --buildmode=c-shared -o out/libmiyuu_ssh_core.dylib main.go
-
-  #    run: go build -v ./...
 
     - name: Test
       run: go test -v ./...
