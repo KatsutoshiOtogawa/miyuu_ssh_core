@@ -12,7 +12,7 @@ on:
   pull_request:
     branches: [ "main" ]
 permissions:
-  contents: read
+  contents: write
 # buildするosのバージョンが新しすぎると実行環境で依存しているlibcが古くなり、実行できなくなる。
 # なので最新のものを使うわ無い。
 jobs:
