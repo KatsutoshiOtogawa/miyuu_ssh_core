@@ -1,0 +1,5 @@
+{
+    "imports": {
+      "miyuu_ssh/": "https://deno.land/x/miyuu_ssh@v0.0.7/"
+    }
+}

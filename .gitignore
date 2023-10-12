@@ -16,6 +16,15 @@
 
 out/*
 !/out/.gitignore
+!/out/windows
+!/out/windows/.gitignore
+out/linux/*
+!/out/linux
+!/out/linux/.gitignore
+out/mac/*
+!/out/mac
+!/out/mac/.gitignore
+
 
 # Dependency directories (remove the comment below to include it)
 # vendor/

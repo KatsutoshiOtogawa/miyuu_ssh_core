@@ -4,15 +4,13 @@
 	"name": "Debian",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	// "image": "mcr.microsoft.com/devcontainers/base:jammy",
-	"image": "mcr.microsoft.com/vscode/devcontainers/base:0-bullseye",
-
-	// "build": {
-	// 	"dockerfile": "Dockerfile",
-	// 	"args": {
-	// 		// Update 'VARIANT' to pick a .NET Core version: 6.0, 7.0
-	// 		"VARIANT": "bullseye"
-	// 	}
-	// },
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			// Update 'VARIANT' to pick a .NET Core version: 6.0, 7.0
+			"VARIANT": "bullseye"
+		}
+	},
 	"features": {
 		"ghcr.io/devcontainers/features/go:1": {},
 	},
@@ -30,8 +28,14 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				"denoland.vscode-deno",
 				"golang.go"
-			]
+			],
+			"settings": {
+				"deno.enable": true,
+				"deno.path": "/deno/bin/deno",
+				"editor.defaultFormatter": "denoland.vscode-deno",
+			}
 		}
 	}
 
